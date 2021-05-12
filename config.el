@@ -57,3 +57,4 @@
 (add-load-path! "settings")
 ;; Load settings from files in subdirectory
 (use-package! ide)
+(use-package! bindings)
