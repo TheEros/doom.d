@@ -56,5 +56,6 @@
 ;; Include subdirectories
 (add-load-path! "settings")
 ;; Load settings from files in subdirectory
+(use-package! ui)
 (use-package! ide)
 (use-package! bindings)
