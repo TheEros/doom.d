@@ -17,7 +17,9 @@
 (after! company
   (map! :i "<tab>" #'company-indent-or-complete-common)
   (map! :map company-active-map "<tab>" #'company-complete-common)
-  (setq company-idle-delay 0.0
+  (setq company-idle-delay 0.250
         company-minimum-prefix-length 1))
+
+(advice-add 'lsp :before (lambda (&rest _args) (eval '(setf (lsp-session-server-id->folders (lsp-session)) (ht)))))
 
 (provide 'ide)
