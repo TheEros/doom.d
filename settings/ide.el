@@ -20,6 +20,6 @@
   (setq company-idle-delay 0.250
         company-minimum-prefix-length 1))
 
-(advice-add 'lsp :before (lambda (&rest _args) (eval '(setf (lsp-session-server-id->folders (lsp-session)) (ht)))))
+;;(advice-add 'lsp :before (lambda (&rest _args) (eval '(setf (lsp-session-server-id->folders (lsp-session)) (ht)))))
 
 (provide 'ide)
