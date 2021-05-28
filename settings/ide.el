@@ -20,6 +20,9 @@
   (setq company-idle-delay 0.250
         company-minimum-prefix-length 1))
 
-;;(advice-add 'lsp :before (lambda (&rest _args) (eval '(setf (lsp-session-server-id->folders (lsp-session)) (ht)))))
+;;Increase the amount of data which Emacs reads from the process
+(setq read-process-output-max (* 1024 1024)) ;; 1mb
+;;
+(advice-add 'lsp :before (lambda (&rest _args) (eval '(setf (lsp-session-server-id->folders (lsp-session)) (ht)))))
 
 (provide 'ide)
