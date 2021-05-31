@@ -51,3 +51,4 @@
 
 ;;youdao
 (package! youdao-dictionary)
+(package! company-tabnine)
