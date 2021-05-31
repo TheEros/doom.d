@@ -58,6 +58,8 @@
         (when (and company-message-func
                    (stringp (funcall company-message-func)))
           (unless (string-match "The free version of TabNine only indexes up to" (funcall company-message-func))
-            ad-do-it)))))
+            ad-do-it))))
+  ;;将tabnine添加到backends
+  (add-to-list 'company-backends 'company-tabnine))
 
 (provide 'ide)
