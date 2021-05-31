@@ -22,11 +22,10 @@
 
 ;;Increase the amount of data which Emacs reads from the process
 (setq read-process-output-max (* 1024 1024)) ;; 1mb
-;;
-(advice-add 'lsp :before (lambda (&rest _args) (eval '(setf (lsp-session-server-id->folders (lsp-session)) (ht)))))
 
 ;;配置tabnine
 (use-package! company-tabnine
+  :ensure t
   :when (featurep! :completion company)
   :config
   (defun company//sort-by-tabnine (candidates)
