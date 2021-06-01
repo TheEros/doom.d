@@ -25,7 +25,6 @@
 
 ;;配置tabnine
 (use-package! company-tabnine
-  :ensure t
   :when (featurep! :completion company)
   :config
   (defun company//sort-by-tabnine (candidates)
