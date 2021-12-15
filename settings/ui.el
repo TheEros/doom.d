@@ -4,5 +4,5 @@
       doom-variable-pitch-font (font-spec :family "JetBrainsMono" :size 13)
       ivy-posframe-font (font-spec :family "JetBrainsMono" :size 13))
 
-(setq doom-theme 'doom-city-lights)
+;; (setq doom-theme 'doom-city-lights)
 (provide 'ui)

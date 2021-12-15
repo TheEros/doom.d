@@ -20,7 +20,7 @@
   (map! :i "<tab>" #'company-indent-or-complete-common)
   (map! :map company-active-map "<tab>" #'company-complete-common)
   ;; 打字卡顿或者提示卡顿可将数值提高到0.250
-  (setq company-idle-delay 0.250
+  (setq company-idle-delay 0.000
         company-minimum-prefix-length 1))
 
 ;;Increase the amount of data which Emacs reads from the process
