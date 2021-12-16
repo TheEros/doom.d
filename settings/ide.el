@@ -19,7 +19,7 @@
 (after! company
   (map! :i "<tab>" #'company-indent-or-complete-common)
   (map! :map company-active-map "<tab>" #'company-complete-common)
-  ;; 打字卡顿或者提示卡顿可将数值提高到0.250
+  ;; 打字卡顿或者提示卡顿可将数值提高到0.250,emacs >= 28，开启native-comp可将此值修改为0.000
   (setq company-idle-delay 0.000
         company-minimum-prefix-length 1))
 
