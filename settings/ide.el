@@ -11,6 +11,8 @@
         lsp-ui-sideline-show-code-actions nil
         lsp-ui-imenu--custom-mode-line-format ""
         lsp-enable-file-watchers nil
+        ;;用于开启rust类型推断
+        lsp-rust-analyzer-server-display-inlay-hints t
         +lsp-company-backends '(company-capf company-yasnippet
                                              company-tabnine
                                              :separate)))
