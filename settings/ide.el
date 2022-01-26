@@ -66,4 +66,24 @@
   ;;将tabnine添加到backends
   (add-to-list 'company-backends 'company-tabnine))
 
+(use-package! citre
+  :defer t
+  :init
+  (require 'citre-config)
+  (global-set-key (kbd "C-x c j") 'citre-jump)
+  (global-set-key (kbd "C-x c J") 'citre-jump-back)
+  (global-set-key (kbd "C-x c p") 'citre-ace-peek)
+  :config
+  (setq citre-project-root-function #'projectile-project-root)
+  ;; See https://github.com/universal-ctags/citre/wiki/Use-Citre-together-with-lsp-mode
+  (define-advice xref--create-fetcher (:around (-fn &rest -args) fallback)
+    (let ((fetcher (apply -fn -args))
+          (citre-fetcher
+           (let ((xref-backend-functions '(citre-xref-backend t)))
+             (apply -fn -args))))
+      (lambda ()
+        (or (with-demoted-errors "%s, fallback to citre"
+              (funcall fetcher))
+            (funcall citre-fetcher))))))
+
 (provide 'ide)

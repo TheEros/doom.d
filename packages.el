@@ -52,3 +52,6 @@
 ;;youdao
 (package! youdao-dictionary)
 (package! company-tabnine)
+(when (featurep! :completion company)
+  (package! citre :recipe (:host github :repo "universal-ctags/citre" :files ("*.el"))))
+(package! pomm)
