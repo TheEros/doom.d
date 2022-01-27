@@ -55,3 +55,4 @@
 (when (featurep! :completion company)
   (package! citre :recipe (:host github :repo "universal-ctags/citre" :files ("*.el"))))
 (package! pomm)
+(package! leetcode)
