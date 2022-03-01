@@ -6,7 +6,7 @@
 
 ;; (setq doom-theme 'doom-one)
 
-(use-package modus-themes
+(use-package! modus-themes
   :ensure
   :init
   ;; Add all your customizations prior to loading the themes
