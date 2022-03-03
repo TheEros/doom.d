@@ -58,11 +58,11 @@
   ;; prompt me to purchase a paid version in a large project.
   ;; 禁止tabnine提示升级付费版本
   (defadvice company-echo-show (around disable-tabnine-upgrade-message activate)
-      (let ((company-message-func (ad-get-arg 0)))
-        (when (and company-message-func
-                   (stringp (funcall company-message-func)))
-          (unless (string-match "The free version of TabNine only indexes up to" (funcall company-message-func))
-            ad-do-it))))
+    (let ((company-message-func (ad-get-arg 0)))
+      (when (and company-message-func
+                 (stringp (funcall company-message-func)))
+        (unless (string-match "The free version of TabNine only indexes up to" (funcall company-message-func))
+          ad-do-it))))
   ;;将tabnine添加到backends
   (add-to-list 'company-backends 'company-tabnine))
 
