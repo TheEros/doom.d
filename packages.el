@@ -57,3 +57,4 @@
 (package! pomm)
 (package! leetcode)
 (package! modus-themes)
+(package! epkg)
