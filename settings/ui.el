@@ -7,7 +7,7 @@
 ;; (setq doom-theme 'doom-one)
 
 (use-package! modus-themes
-  :ensure
+  ;; :ensure t
   :init
   ;; Add all your customizations prior to loading the themes
   (setq modus-themes-italic-constructs t
