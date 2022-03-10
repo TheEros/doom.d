@@ -58,3 +58,5 @@
 (package! leetcode)
 (package! modus-themes)
 (package! epkg)
+;; vscode gitlens
+(package! blamer :recipe (:host github :repo "artawower/blamer.el"))
