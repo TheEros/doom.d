@@ -1,0 +1,10 @@
+* root :elfeed:
+** Programming :programming:
+*** [[https://this-week-in-rust.org/rss.xml][This Week in Rust]] :rust:
+*** [[https://tech.meituan.com/feed/][美团技术]] :美团:
+** News :news:
+*** Top news :tops:
+**** http://feeds.bbci.co.uk/news/rss.xml
+*** [[https://www.zhihu.com/rss][知乎]]
+*** [[https://rsshub.app/zhihu/daily][知乎热榜]]
+*** [[https://rss.shab.fun/cctv/world][央视新闻全球]] :央视全球:
