@@ -56,7 +56,7 @@
   (package! citre :recipe (:host github :repo "universal-ctags/citre" :files ("*.el"))))
 (package! pomm)
 (package! leetcode)
-(package! modus-themes)
+;; (package! modus-themes)
 (package! epkg)
 ;; vscode gitlens
 (package! blamer :recipe (:host github :repo "artawower/blamer.el"))
