@@ -86,4 +86,19 @@
               (funcall fetcher))
             (funcall citre-fetcher))))))
 
+;;rust 这些代码行想要解决的问题是，在 lsp 模式下悬停几乎不会显示有用的 rust-analyzer 签名。
+;;question https://github.com/emacs-lsp/lsp-mode/pull/1740
+(cl-defmethod lsp-clients-extract-signature-on-hover (contents (_server-id (eql rust-analyzer)))
+  (-let* (((&hash "value") contents)
+          (groups (--partition-by (s-blank? it) (s-lines (s-trim value))))
+          (sig_group (if (s-equals? "```rust" (car (-third-item groups)))
+                         (-third-item groups)
+                       (car groups)))
+          (sig (--> sig_group
+                    (--drop-while (s-equals? "```rust" it) it)
+                    (--take-while (not (s-equals? "```" it)) it)
+                    (--map (s-trim it) it)
+                    (s-join " " it))))
+    (lsp--render-element (concat "```rust\n" sig "\n```"))))
+
 (provide 'ide)
