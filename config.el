@@ -59,4 +59,3 @@
 (use-package! ui)
 (use-package! ide)
 (use-package! bindings)
-(use-package! app)
