@@ -54,9 +54,11 @@
 (package! company-tabnine)
 (when (featurep! :completion company)
   (package! citre :recipe (:host github :repo "universal-ctags/citre" :files ("*.el"))))
+;; 番茄钟
 (package! pomm)
 (package! leetcode)
 ;; (package! modus-themes)
-(package! epkg)
+;; list package 增强版
+;; (package! epkg)
 ;; vscode gitlens
-(package! blamer :recipe (:host github :repo "artawower/blamer.el"))
+;; (package! blamer :recipe (:host github :repo "artawower/blamer.el"))
