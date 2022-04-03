@@ -7,7 +7,8 @@
         :desc "Imenu" "c," #'lsp-ui-imenu)
   (setq lsp-headerline-breadcrumb-enable-diagnostics nil
         lsp-headerline-breadcrumb-enable t
-        lsp-lens-enable t
+        ;;用以解决在wsl2 windows terminal中rust项目移动光标导致重复显示行的问题。
+        lsp-lens-enable nil
         lsp-ui-sideline-show-code-actions nil
         lsp-ui-imenu--custom-mode-line-format ""
         lsp-enable-file-watchers nil
