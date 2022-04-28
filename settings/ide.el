@@ -29,6 +29,9 @@
 ;;Increase the amount of data which Emacs reads from the process
 (setq read-process-output-max (* 1024 1024)) ;; 1mb
 
+;;启动时自动搜索项目
+(setq projectile-project-search-path '("~/code/"))
+
 ;;配置tabnine
 (use-package! company-tabnine
   :when (featurep! :completion company)
