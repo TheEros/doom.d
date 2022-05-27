@@ -31,7 +31,7 @@
 (setq read-process-output-max (* 1024 1024)) ;; 1mb
 
 ;;启动时自动搜索项目
-(setq projectile-project-search-path '("~/code/"))
+(setq projectile-project-search-path '("~/IdeaProjects/" "~/PycharmProjects/"))
 
 ;;配置tabnine
 (use-package! company-tabnine
