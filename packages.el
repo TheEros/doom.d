@@ -52,8 +52,8 @@
 ;;youdao
 (package! youdao-dictionary)
 (package! company-tabnine)
-(when (featurep! :completion company)
-  (package! citre :recipe (:host github :repo "universal-ctags/citre" :files ("*.el"))))
+;; (when (featurep! :completion company)
+;;   (package! citre :recipe (:host github :repo "universal-ctags/citre" :files ("*.el"))))
 ;; 番茄钟
 (package! pomm)
 (package! leetcode)
