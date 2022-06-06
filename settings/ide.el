@@ -106,4 +106,6 @@
                     (s-join " " it))))
     (lsp--render-element (concat "```rust\n" sig "\n```"))))
 
+;;用来格式化toml文件，cargo install taplo
+(set-formatter! 'taplo "taplo format" :modes '(conf-toml-mode))
 (provide 'ide)
